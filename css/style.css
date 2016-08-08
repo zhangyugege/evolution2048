@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align:center
+}
+#background{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size:cover;
+}
+#loading{
+    /*290 54*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 36.25rem;
+    height: 6.75rem;
+    margin-left: -18.125rem;
+}
+#lose{
+    z-index: 1777;
+
+}
+#losecat{
+    /*110 55*/
+    position: absolute;
+    width: 13.75rem;
+    height: 6.875rem;
+    left: 20%;
+    top: 37%;
+    background-size:cover;
+}
+span{
+    position: absolute;
+    display: block;
+    font-size: 60px;
+    left: 50%;
+    top: 40%;
+    color: white;
+    font-family: "黑体";
+}
+#losebtn{
+    /*206 92*/
+    background: url("../img/game_fh.png");
+    width: 12.35rem;
+    height: 5.5rem;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    margin-left: -6.4rem;
+    background-size:cover;
+    border: none;
+    z-index: 999;
+}
+#start{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -6rem;
+    /*width: 161px;*/
+    width: 12rem;
+    /*height: 66px;*/
+    height: 4.8rem;
+    z-index:999;
+    background: url("../img/play_btn.png");
+    border: none;
+    background-size:cover;
+}
+.hidden{
+    visibility: hidden;
+}
+
+#game{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index:888;
+    background-size:cover;
+}
+#logo{
+    background: url("../img/logo.png");
+    /*width: 80%;*/
+    /*width: 40rem;*/
+    width: 30rem;
+    /*width: 80%;*/
+    /*height: 20%;   0.42 */
+    /*height: 16.8rem;*/
+    height: 12.6rem;
+    position: relative;
+    left: 50%;
+    margin-left: -15rem;
+    background-size:cover;
+}
+#container{
+    background: url("../img/playfield.png");
+    /*width: 37.5rem;*/
+    /*height: 37.5rem;*/
+    width: 28.125rem;
+    height: 28.125rem;
+    position: relative;
+    background-size:cover;
+    margin: 0 auto;
+    bottom: 0;
+
+}
+#container #wrap{
+    /*width: 296px;*/
+    /*width: 34rem;*/
+    width: 25.5rem;
+    /*height: 296px;*/
+    /*height: 34rem;*/
+    height: 25.5rem;
+    position: relative;
+    /*left: 22px;*/
+    /*left: 2.075rem;*/
+    left: 1.556rem;
+    top: 3rem;
+    /*top: 32px;*/
+    background-size:cover;
+    /*background-color: red;*/
+    /*opacity: 0.5;*/
+}
+#container #wrap div {
+    /*width: 8.33rem;*/
+    /*height: 8.33rem;*/
+    width: 6.247rem;
+    height:6.247rem;
+    float:left;
+    background-size:cover;
+}
+div .n2{
+    background: url("../img/n2.png");
+}
+div .n4{
+    background: url("../img/n4.png");
+}
+div .n8{
+    background: url("../img/n8.png");
+}
+div .n16{
+    background: url("../img/n16.png");
+}
+div .n32{
+    background: url("../img/n32.png");
+}
+div .n64{
+    background: url("../img/n64.png");
+}
+div .n128{
+    background: url("../img/n128.png");
+}
+div .n256{
+    background: url("../img/n256.png");
+}
+div .n512{
+    background: url("../img/n512.png");
+}
+div .n1024{
+    background: url("../img/n1024.png");
+}
+div .n2048{
+    background: url("../img/n2048.png");
+}
+div .n4096{
+    background: url("../img/n4096.png");
+}
+div .n8192{
+    background: url("../img/n8192.png");
+}
+div .n16384{
+    background: url("../img/n16384.png");
+}
+div .n32768{
+    background: url("../img/n32768.png");
+}
+div .n65536{
+    background: url("../img/n65536.png");
+}
+div .n131072{
+    background: url("../img/n131072.png");
+}
+div .leftIn{
+    -webkit-animation: moveFromLeftFade .2s ease both;
+    animation: moveFromLeftFade .2s ease both;
+}
+div .rightIn{
+    -webkit-animation: moveFromRightFade .2s ease both;
+    animation: moveFromRightFade .2s ease both;
+}
+div .upIn{
+    -webkit-animation: moveFromTopFade .2s ease both;
+    animation: moveFromTopFade .2s ease both;
+}
+div .downIn{
+    -webkit-animation: moveFromBottomFade .2s ease both;
+    animation: moveFromBottomFade .2s ease both;
+}
+@-webkit-keyframes moveFromLeftFade {
+    from {  -webkit-transform: translateX(-10%); }
+}
+@keyframes moveFromLeftFade {
+    from {  -webkit-transform: translateX(-10%); transform: translateX(-10%); }
+}
+@-webkit-keyframes moveFromRightFade {
+    from { -webkit-transform: translateX(10%); }
+}
+@keyframes moveFromRightFade {
+    from {  -webkit-transform: translateX(10%); transform: translateX(10%); }
+}
+@-webkit-keyframes moveFromTopFade {
+    from {  -webkit-transform: translateY(-10%); }
+}
+@keyframes moveFromTopFade {
+    from {  -webkit-transform: translateY(-10%); transform: translateY(-10%); }
+}
+@-webkit-keyframes moveFromBottomFade {
+    from {  -webkit-transform: translateY(10%); }
+}
+@keyframes moveFromBottomFade {
+    from {  -webkit-transform: translateY(10%); transform: translateY(10%); }
+}

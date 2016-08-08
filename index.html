@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>进化版2048</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/mobileUtil.js"></script>
+</head>
+<body>
+    <img id="loading" src="img/loading.png">
+    <img id="background" src="img/background1.jpg" class="hidden">
+    <div id="lose" class="hidden">
+        <img id="losecat" src="img/35_3.png">
+        <input id="losebtn" type="button">
+    </div>
+    <input id="start"  type="button" class="hidden">
+    <div id="game" class="hidden">
+        <div id="logo"></div>
+        <div id="container" class="hidden">
+            <div id="wrap" >
+                <div class="n2"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+    </div>
+<script src="js/zepto.min.js"></script>
+<script src="js/touch.js"></script>
+<script src="js/game.js"></script>
+<script>
+    document.addEventListener('touchmove',function(event){
+        event.preventDefault(); },false);
+
+//    document.addEventListener('keydown',function(e){
+//       var e=e||window.event;
+//        if(e){
+//            switch(e.keycode){
+//                case 37:{
+//                    swipeleft();
+//                   break;
+//                }
+//                case 38:{
+//                    swipeup();
+//                    break;
+//                }
+//                case 39:{
+//                    swiperight();
+//                    break;
+//                }
+//                case 40:{
+//                    swipedown();
+//                    break;
+//                }
+//            }
+//        }
+//    });
+    function swipeup(){
+        if (!game||!game.gameStart) return;
+        game.turnUp();
+        for(var i=0;i<2;i++)game.createBlock();
+        zyrender(game.arr,game.size);
+        if(game.checkLose()==1){
+            game.lose();
+            zyend();
+        }
+    }
+    function swipedown(){
+        if (!game||!game.gameStart) return;
+        game.turnDown();
+        for(var i=0;i<2;i++)game.createBlock();
+        zyrender(game.arr,game.size);
+        if(game.checkLose()==1){
+            game.lose();
+            zyend();
+        }
+    }
+    function swipeleft(){
+        if (!game||!game.gameStart) return;
+        game.turnLeft();
+        for(var i=0;i<2;i++)game.createBlock();
+        zyrender(game.arr,game.size);
+        if(game.checkLose()==1){
+            game.lose();
+            zyend();
+        }
+    }
+    function swiperight(){
+        if (!game||!game.gameStart) return;
+        game.turnRight();
+        for(var i=0;i<2;i++)game.createBlock();
+        zyrender(game.arr,game.size);
+        if(game.checkLose()==1){
+            game.lose();
+            zyend();
+        }
+    }
+    $(document).swipeUp(swipeup);
+
+    $(document).swipeDown(swipedown);
+
+    $(document).swipeLeft(swipeleft);
+
+    $(document).swipeRight(swiperight);
+
+</script>
+</body>
+</html>
