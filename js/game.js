@@ -115,7 +115,6 @@ function zyloading(){
         for (var i = 0; i < arr.length; i++) {
             var IMG = new Image();
             IMG.src = "./img/"+arr[i];
-            h5api.progress(i, arr.length);
         }
     }
     preload(img);
