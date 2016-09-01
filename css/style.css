@@ -16,6 +16,7 @@
 #loading{
     /*290 54*/
     position: absolute;
+    background: url("../img/loading.png") no-repeat;
     left: 50%;
     top: 50%;
     width: 36.25rem;
@@ -66,10 +67,17 @@ span{
     width: 12rem;
     /*height: 66px;*/
     height: 4.8rem;
-    z-index:999;
-    background: url("../img/play_btn.png");
+    z-index:1000;
+
     border: none;
     background-size:cover;
+}
+#startbtn{
+    width:12rem;
+    height: 4.8rem;
+    background: url("../img/play_btn.png");
+    border:none;
+    outline: hidden;
 }
 .hidden{
     visibility: hidden;
