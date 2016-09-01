@@ -75,7 +75,8 @@ span{
 #startbtn{
     width:12rem;
     height: 4.8rem;
-    background: url("../img/play_btn.png");
+    background: url("../img/play_btn.png") no-repeat;
+    background-size: contain;
     border:none;
     outline: hidden;
 }
